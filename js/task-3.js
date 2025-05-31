@@ -1,10 +1,9 @@
 function getElementWidth(content, padding, border) {
-  const contentWidth = parseFloat(content);
-  const paddingWidth = parseFloat(padding);
-  const borderWidth = parseFloat(border);
-
-  const together = contentWidth + paddingWidth * 2 + borderWidth * 2;
-  return together;
+  return (
+    Number.parseFloat(content) +
+    Number.parseFloat(padding) * 2 +
+    Number.parseFloat(border) * 2
+  );
 }
 
 console.log(getElementWidth("50px", "8px", "4px"));
